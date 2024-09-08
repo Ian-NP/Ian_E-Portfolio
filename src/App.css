@@ -1,0 +1,44 @@
+* > p{
+    margin: 0;
+}
+
+*{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.pageBg{
+    width: 100vw;
+    max-height: 100vh;
+    height: fit-content;
+    position: fixed;
+    z-index: -1;
+}
+
+.pageBg::before{
+    content: "";
+    background-image: url("images/minimal-dark-gradient-black-wallpaper_1423-16050.jpg");
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(8px);
+    margin: -15px; /* this will do the trick */
+    z-index: -1;
+}
+
+.pageContent{
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure it covers the full viewport height */
+}

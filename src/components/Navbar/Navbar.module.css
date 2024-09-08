@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+.navbarContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.nameLogoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    color: #FAFAFA;
+    position: relative;
+}
+
+.nameLogo{
+    font-family: "Pinyon Script", cursive;
+    font-weight: 400;
+    font-weight: normal;
+    font-size: 30px;
+    margin: 0;
+}
+
+.nameText{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.navContainer {
+    padding: 8px 3px;
+    background: linear-gradient(
+        to bottom right,
+        rgba(193, 193, 193, 0.25),
+        rgba(153, 153, 153, 0.25)
+    );
+    box-shadow: 0px 6px 10px rgba(146, 146, 146, 0.25); /* Subtle glowing effect */
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    border: 2px solid rgb(86, 86, 86); /* Border for the gradient background */
+    border-radius: 100px;
+    background-clip: padding-box;
+    /* Ensure the container expands to fit children */
+    width: 320px; /* Or a fixed width if desired */
+    box-sizing: border-box; /* Ensure padding and border are included in total width */
+    position: relative;
+}
+
+.navLink {
+    font-size: 13px;
+    padding: 8px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 100px;
+    flex: 1; /* Allows flex items to grow and shrink equally */
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Enables flexbox layout for inner content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    /* Optional: Add margin to separate items */
+    margin: 0 5px; /* Adjust margin as needed */
+    transition: background-color 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335), box-shadow 0.3s cubic-bezier(0.6, 0.04, 0.98, 0.335), color 0.3s ease
+}
+
+.navLink:hover{
+    color:rgb(154, 154, 154);
+}
+
+.navLink.active{
+    background-color: rgba(255,255,255,0.20);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navLink.active:hover{
+    color: white;
+}
+
+.contactContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    height: fit-content;
+}
+
+.contactContainer img{
+    height: 35px;
+}
+
+.hideOnMobile{
+    display: none;
+}
+
+.mobileNav{
+    justify-content: center !important;
+}
