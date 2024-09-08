@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import Lottie from "lottie-react";
 import Astronaut from "../../../public/Astronaut Animation.json";
 import styles from "./Home.module.css";
