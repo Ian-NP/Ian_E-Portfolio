@@ -29,7 +29,7 @@ export default function Navbar() {
         </div>
         <nav className={styles.navContainer}>
           <NavLink
-            to="/"
+            to="/Ian_E-Portfolio"
             className={({ isActive }) =>
               isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
             }
