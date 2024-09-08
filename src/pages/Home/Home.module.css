@@ -219,7 +219,7 @@
 
 .leftPictureContainer{
     grid-area: leftPicture;
-    background-image: url("images/myphoto.jpg");
+    background-image: url("/Ian_E-Portfolio/images/myphoto.jpg");
 }
 
 .rightPictureContainer,
