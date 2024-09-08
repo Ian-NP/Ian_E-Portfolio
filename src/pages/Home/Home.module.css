@@ -198,12 +198,12 @@
 
 .rightPictureContainer{
     grid-area: rightPicture;
-    background-image: url("../images/forest.jpg");
+    background-image: url("images/forest.jpg");
 }
 
 .leftPictureContainer{
     grid-area: leftPicture;
-    background-image: url("../images/myphoto.jpg");
+    background-image: url("images/myphoto.jpg");
 }
 
 .rightPictureContainer,
