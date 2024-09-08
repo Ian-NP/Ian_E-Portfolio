@@ -1,3 +1,18 @@
+.mobileMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    background-color: #f8f9fa; /* Light background color */
+    color: #333; /* Dark text color for better readability */
+    font-size: 1.25rem; /* Larger font size for better visibility */
+    text-align: center;
+    position: fixed;
+  }
+
 /* Keyframes for the slide-in from the right */
 @keyframes slideInRight {
     0% {
@@ -34,31 +49,31 @@
 
 /* Apply animations to containers */
 .whoAmIContainer {
-    animation: slideInLeft 0.8s ease-out forwards; /* Faster duration */
+    animation: slideInLeft 1s ease-out forwards; /* Faster duration */
 }
 
 .designationContainer {
-    animation: slideInRight 0.8s ease-out forwards; /* Faster duration */
+    animation: slideInRight 1s ease-out forwards; /* Faster duration */
 }
 
 .educationContainer {
-    animation: slideInRight 0.8s ease-out forwards; /* Faster duration */
+    animation: slideInRight 1s ease-out forwards; /* Faster duration */
 }
 
 .centrePictureContainer {
-    animation: fadeIn 0.8s ease-out forwards; /* Faster duration */
+    animation: fadeIn 1s ease-out forwards; /* Faster duration */
 }
 
 .rightPictureContainer {
-    animation: slideInRight 0.8s ease-out forwards; /* Faster duration */
+    animation: slideInRight 1s ease-out forwards; /* Faster duration */
 }
 
 .leftPictureContainer {
-    animation: slideInLeft 0.8s ease-out forwards; /* Faster duration */
+    animation: slideInLeft 1s ease-out forwards; /* Faster duration */
 }
 
 .skillsContainer {
-    animation: slideInRight 0.8s ease-out forwards; /* Faster duration */
+    animation: slideInRight 1s ease-out forwards; /* Faster duration */
 }
 
 .bentoGridWrapper{
@@ -101,7 +116,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 1.5rem
+    padding: 0 1.5rem;
+    transition: all 0.3s ease, color 0.3s ease;
 }
 
 .bentoGridContainer > div > h2{
@@ -125,7 +141,6 @@
     justify-content: center;
     padding: 0 1.5rem; */
     gap: 0.8rem;
-    
 }
 
 .designationContainer{
@@ -161,6 +176,7 @@
     flex-direction: column;
     justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border to enhance glass effect */
+    transition: all 0.3s ease, color 0.3s ease;
 }
 
 .verticalLine {
@@ -198,12 +214,12 @@
 
 .rightPictureContainer{
     grid-area: rightPicture;
-    background-image: url("images/forest.jpg");
+    background-image: url("/Ian_E-Portfolio/images/forest.jpg");
 }
 
 .leftPictureContainer{
     grid-area: leftPicture;
-    background-image: url("images/myphoto.jpg");
+    background-image: url("/Ian_E-Portfolio/images/myphoto.jpg");
 }
 
 .rightPictureContainer,
@@ -225,7 +241,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Black with 30% opacity */
+    background: rgba(0, 0, 0, 0.35); /* Black with 30% opacity */
     z-index: 1; /* Ensure it's above the background image but below content */
 }
 
@@ -252,4 +268,30 @@
 .iconsContainer > img{
     height: 100%;
     width: 100%;
+    transition: all 0.3s ease, color 0.3s ease;
+}
+
+.whoAmIContainer:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow */
+}
+
+.designationContainer:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow */
+}
+
+.educationDetails:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5); /* More pronounced shadow */
+}
+
+.centrePictureContainer:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow */
+}
+
+.rightPictureContainer:hover,
+.leftPictureContainer:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow */
+}
+
+.iconsContainer > img:hover {
+    transform: scale(1.1); /* Slightly increase size */
 }

@@ -29,7 +29,8 @@ export default function Navbar() {
         </div>
         <nav className={styles.navContainer}>
           <NavLink
-            to="/Ian_E-Portfolio/"
+            to="/"
+            end
             className={({ isActive }) =>
               isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
             }
@@ -37,7 +38,7 @@ export default function Navbar() {
             Home
           </NavLink>
           <NavLink
-            to="/projects/"
+            to="/projects"
             className={({ isActive }) =>
               isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
             }
@@ -45,7 +46,7 @@ export default function Navbar() {
             Projects
           </NavLink>
           <NavLink
-            to="/contact/"
+            to="/contact"
             className={({ isActive }) =>
               isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
             }

@@ -1,0 +1,22 @@
+/* Projects.module.css */
+.container {
+    /* Example styles to ensure visibility */
+    padding: 20px;
+    background-color: #f9f9f9; /* Background color for better visibility */
+  }  
+
+.bentoGridWrapper{
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bentoGridContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr;
+    grid-template-rows: 1fr 1fr;
+
+}
