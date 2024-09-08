@@ -49,14 +49,14 @@ export default function Home() {
           <div className={styles.leftPictureContainer}></div>
           <div className={styles.skillsContainer}>
             <div className={styles.iconsContainer}>
-              <img src="/images/python-svgrepo-com.svg" />
-              <img src="/images/c-sharp-svgrepo-com.svg" />
-              <img src="/images/java-svgrepo-com.svg" />
-              <img src="/images/javascript-svgrepo-com.svg" />
-              <img src="/images/typescript-svgrepo-com.svg" />
-              <img src="/images/nodejs01-svgrepo-com.svg" />
-              <img src="/images/react-svgrepo-com.svg" />
-              <img src="/images/expressjs_logo_icon_169185.svg" />
+              <img src="images/python.svg" />
+              <img src="images/csharp.svg" />
+              <img src="images/java.svg" />
+              <img src="images/javascript.svg" />
+              <img src="images/typescript.svg" />
+              <img src="images/nodejs.svg" />
+              <img src="images/react.svg" />
+              <img src="images/expressjs.svg" />
             </div>
           </div>
         </div>

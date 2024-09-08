@@ -19,7 +19,7 @@
 
 .pageBg::before{
     content: "";
-    background-image: url("images/minimal-dark-gradient-black-wallpaper_1423-16050.jpg");
+    background-image: url("images/background.jpg");
     position: fixed;
     background-repeat: no-repeat;
     background-size: cover;
