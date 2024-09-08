@@ -15,11 +15,18 @@
     height: fit-content;
     position: fixed;
     z-index: -1;
+    overflow: hidden; /* Ensures that the image does not overflow the container */
 }
 
-.pageBg::before{
+.pageBg img {
+    width: 100%; /* Ensures the image stretches to cover the width of the container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.pageBg::after{
     content: "";
-    background-image: url("images/background.jpg");
+    background-image: url("../images/background.jpg");
     position: fixed;
     background-repeat: no-repeat;
     background-size: cover;
