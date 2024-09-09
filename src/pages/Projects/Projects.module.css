@@ -193,7 +193,7 @@
 }
 
 .bedImages img:hover {
-    transform: scale(1.3); /* Slight zoom on hover for a cool effect */
+    transform: scale(1.5); /* Slight zoom on hover for a cool effect */
     z-index: 10;
 }
 
