@@ -2,6 +2,7 @@ import Lottie from "lottie-react";
 import Astronaut from "../../../public/Astronaut Animation.json";
 import styles from "./Home.module.css";
 import { useEffect, useState } from "react";
+import UnsupportedMobileView from "../../components/UnsupportedMobileView";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -24,9 +25,7 @@ export default function Home() {
   return (
     <>
       {isMobile ? (
-        <div className={styles.mobileMessage}>
-          <p>Please view this page on a desktop or laptop for the best experience.</p>
-        </div>
+        <UnsupportedMobileView message={"Please view this page on a desktop or laptop for the best experience."} />
       ) : (
         <div className={styles.bentoGridWrapper}>
           <div className={styles.bentoGridContainer}>

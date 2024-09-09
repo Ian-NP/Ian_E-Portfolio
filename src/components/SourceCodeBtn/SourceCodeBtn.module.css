@@ -1,0 +1,32 @@
+.iconTextBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #505050;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: fit-content;
+    padding: 0.6rem 0.5rem;
+    gap: 10px;
+    text-decoration: none; /* Remove underline */
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25); /* Drop shadow */
+}
+
+.iconTextBtn:hover {
+    opacity: 0.8;
+    color: white;
+}
+
+.btnIcon {
+    width: 28px;
+    height: 28px; 
+}
+
+.textIcon {
+    font-size: 14px;
+    font-weight: 500;
+}

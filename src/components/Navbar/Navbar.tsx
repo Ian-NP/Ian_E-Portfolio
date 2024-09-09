@@ -56,13 +56,13 @@ export default function Navbar() {
         </nav>
         <div className={`${styles.contactContainer} ${isMobile ? styles.hideOnMobile : ''}`}>
           <a href="https://github.com/Ian-NP?tab=overview" target="_blank" rel="noopener noreferrer">
-            <img src="images/github.svg" alt="GitHub" />
+            <img src="/Ian_E-Portfolio/images/github.svg" alt="GitHub" />
           </a>
           <a href="https://www.linkedin.com/in/lim-wq-ian/" target="_blank" rel="noopener noreferrer">
-            <img src="images/linkedin.svg" alt="LinkedIn" />
+            <img src="/Ian_E-Portfolio/images/linkedin.svg" alt="LinkedIn" />
           </a>
           <a href="mailto:iancheif117@gmail.com" target="_blank" rel="noopener noreferrer">
-            <img src="images/mail.svg" alt="Email" />
+            <img src="/Ian_E-Portfolio/images/mail.svg" alt="Email" />
           </a>
         </div>
       </div>

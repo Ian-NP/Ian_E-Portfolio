@@ -130,7 +130,6 @@
 .bentoGridContainer > div > p{
     color: #CBCBCB;
     font-weight: 500; /* Semi-Bold */
-    font-weight: 1rem;
     font-size: 1rem;
 }
 
@@ -212,6 +211,18 @@
     transform: scale(1.4) translateY(-5%);
 }
 
+.centrePictureContainer::before{
+    content: ""; /* Required to make the pseudo-element appear */
+    position: absolute; /* Position it relative to the container */
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Black with 30% opacity */
+    z-index: 1; /* Ensure it's above the background image but below content */
+}
+
 .rightPictureContainer{
     grid-area: rightPicture;
     background-image: url("/Ian_E-Portfolio/images/forest.jpg");
@@ -219,7 +230,7 @@
 
 .leftPictureContainer{
     grid-area: leftPicture;
-    background-image: url("images/myphoto.jpg");
+    background-image: url("/Ian_E-Portfolio/images/myphoto.jpg");
 }
 
 .rightPictureContainer,
@@ -241,7 +252,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.35); /* Black with 30% opacity */
+    background: rgba(0, 0, 0, 0.25); /* Black with 30% opacity */
     z-index: 1; /* Ensure it's above the background image but below content */
 }
 

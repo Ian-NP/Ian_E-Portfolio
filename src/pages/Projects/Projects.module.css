@@ -1,3 +1,49 @@
+/* Keyframes for the slide-in from the right */
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(40%); /* Increased from 30% */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes for the slide-in from the left */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-40%); /* Increased from -30% */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Keyframes for the fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Keyframes for the slide-in from the bottom */
+@keyframes slideInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(20%); /* Adjusted for sliding from the bottom */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Projects.module.css */
 .container {
     /* Example styles to ensure visibility */
@@ -13,10 +59,239 @@
     align-items: center;
 }
 
-.bentoGridContainer{
-    width: 100%;
+.bentoGridContainer {
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    height: 60vw;
+    max-height: 700px;
     display: grid;
-    grid-template-columns: 2fr 3fr 3fr;
+    gap: 20px;
+    margin: 0 auto;
+    grid-template-columns: 4fr 3fr 3fr;
     grid-template-rows: 1fr 1fr;
-
+    grid-template-areas: 
+        "bed fed fed"
+        "bed prg2 prg1"
+    ;
 }
+
+.bentoGridContainer > a{
+    border-radius: 20px;
+    background-color: #2C2C2E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem 1.5rem;
+    transition: all 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect styling for grid containers */
+.bentoGridContainer > a:hover {
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 60px -20px, 
+    rgba(255, 255, 255, 0.3) 0px 20px 40px -20px, 
+    rgba(255, 255, 255, 0.35) 0px -2px 6px 0px inset;
+    transform: scale(1.02); /* Slightly enlarge the container */
+    z-index: 2;
+}
+
+.bentoGridContainer h2{
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.bentoGridContainer > a > p{
+    color: #CBCBCB;
+    font-weight: 500; /* Semi-Bold */
+    font-size: 1rem;
+}
+
+.boldText {
+    font-weight: bold;
+    color: white;
+}
+
+.bedContainer{
+    grid-area: bed;
+    animation: slideInLeft 1s ease-out forwards; /* Faster duration */
+}
+
+.bedHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+}
+
+.bedContent{
+    margin-bottom: 1rem;
+}
+
+.technologiesContainer{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.technologiesContainer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #505050;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    width: fit-content;
+    padding: 0.5rem;
+    text-decoration: none; /* Remove underline */
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25); /* Drop shadow */
+}
+
+.technologiesContainer div:hover {
+    opacity: 0.8;
+}
+
+.bedImages {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bedImages img {
+    width: 70%;
+    height: auto;
+    position: absolute; /* Allows overlap */
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 19px 38px, rgba(0, 0, 0, 0.32) 0px 15px 12px;
+}
+
+.bedImages img:first-child {
+    transform: rotate(-10deg); /* Slight angle for the first image */
+    z-index: 1; /* Bring the first image in front */
+    right: 35%; /* Adjust positioning to control overlap */
+    margin-top: 2rem;
+}
+
+.bedImages img:last-child {
+    transform: rotate(7deg); /* Slight angle for the second image */
+    z-index: 0; /* Send the second image behind */
+    left: 32%; /* Adjust positioning to control overlap */
+}
+
+.bedImages img:hover {
+    transform: scale(1.3); /* Slight zoom on hover for a cool effect */
+    z-index: 10;
+}
+
+.fedContainer{
+    grid-area: fed;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    animation: slideInRight 1s ease-out forwards; /* Faster duration */
+}
+
+.fedInfoWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 50%;
+}
+
+.fedContentWrapper{
+    color: #CBCBCB;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.fedImages {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fedImages img {
+    height: auto;
+    position: absolute; /* Allows overlap */
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 19px 38px, rgba(0, 0, 0, 0.32) 0px 15px 12px;
+    margin-right: 3rem;
+}
+
+.fedImages img:first-child {
+    transform: rotate(-5deg); /* Slight angle for the first image */
+    z-index: 1; /* Bring the first image in front */
+    right: 35%; /* Adjust positioning to control overlap */
+    width: 45%;
+}
+
+.fedImages img:last-child {
+    transform: rotate(7deg); /* Slight angle for the second image */
+    z-index: 0; /* Send the second image behind */
+    left: 10%; /* Adjust positioning to control overlap */
+    width: 100%;
+}
+
+.fedImages img:hover {
+    transform: scale(1.5); /* Slight zoom on hover for a cool effect */
+    z-index: 10;
+}
+
+.prg2Container, .prg1Container {
+    justify-content: space-between !important;
+    animation: slideInBottom  1s ease-out forwards; /* Faster duration */
+}
+
+.prg1Container {
+    grid-area: prg1;
+}
+
+.prg2Container {
+    grid-area: prg2;
+}
+
+.prg2Container h2, .prg1Container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.prg2Image, .prg1Image {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prg2Image img, .prg1Image img {
+    width: 80%;
+    height: 90%;
+    border-radius: 20px;
+}
+
+.sourceCodeBtnWrapper {
+    position: absolute;
+}
+
+
